@@ -1,0 +1,96 @@
+.container{
+    width: 100%;
+    height: auto;
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.container div{
+    display: flex;
+}
+
+
+.wysylanie{
+    width: 800px;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.wysylanie div{
+    align-self:center;
+}
+
+.wysylanie div{
+    width: 700px;
+}
+
+.wysylanie div input[placeholder="Imie"]{
+    margin-right: 5px;
+}
+
+.wysylanie div input[placeholder="Email"]{
+    margin-left: 5px;
+}
+
+.wysylanie div input,
+.wysylanie div textarea,
+.wysylanie div button{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.wysylanie div input,
+.wysylanie div textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.wysylanie div textarea{
+    resize: none;
+    height: 200px;
+}
+
+.wysylanie div button{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--second-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.linia{
+    border-left: 2px solid rgb(66, 66, 66);
+    height: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info{
+    width: 500px;
+    height: auto;
+}
+
+.mapa{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.mapa iframe{
+    width: 100%;
+    height: 350px;
+}
