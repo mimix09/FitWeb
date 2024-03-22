@@ -49,6 +49,11 @@
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
+
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: medium;
 }
 
 .wysylanie div input,
@@ -59,7 +64,7 @@
 
 .wysylanie div textarea{
     resize: none;
-    height: 200px;
+    height: 150px;
 }
 
 .wysylanie div button{
@@ -69,6 +74,14 @@
     background-color: var(--second-color);
     color: #fff;
     cursor: pointer;
+}
+
+.wysylanie h1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: var(--second-tekst-color);
 }
 
 .linia{
@@ -83,7 +96,29 @@
 .info{
     width: 500px;
     height: auto;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    color: var(--second-tekst-color);
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
+.info div, .info h1{
+    margin-left: 30px;
+}
+
+.info a{
+    text-decoration: none;
+    color: var(--second-tekst-color);
+}
+
+.info div i{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+}
+
 
 .mapa{
     margin-top: 30px;

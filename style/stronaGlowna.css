@@ -7,6 +7,20 @@
     margin-bottom: 70px;
 }
 
+.other_container{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 1400px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 60px 0;
+}
+
+.tlo{
+    background-color: white;
+}
+
 .block_color{
     width: 100%;
     height: 650px;
@@ -43,10 +57,9 @@
 
 /* otrzymasz */
     .otrzymasz{
-        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
         border-radius: 15px;
         padding-top: 20px;
-        background-color: white;
+        padding: 20px;
     }
 
     .otrzymasz h1{
@@ -56,7 +69,7 @@
 
     .otrzymasz div{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .otrzymasz div div{
@@ -90,9 +103,9 @@
         padding-top: 5px;
         margin-top: 40px;
         padding-bottom: 70px;
-        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
+        /* box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
         border-radius: 15px;
-        background-color: white;
+        background-color: white; */
     }
 
     .profits h1{
@@ -123,57 +136,63 @@
 
 
 /* galeria */
-    .mini_galeria{
+    .mini_gallery{
         display: grid;
-        grid-gap: 5px;
         grid-template-columns: repeat(2, 1fr);
+        padding: 20px 0;
     }
 
-    .mini_galeria div{
-        position: relative;
+    .mini_gallery div{
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
     }
 
-    .mini_galeria div img{
-        width: 597px;
-        height: 300px;
+    .mini_gallery img{
+        width: 700px;
+        height: 400px;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 8px;
     }
 
-    .mini_galeria div .tekst{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: var(--second-color);
-        opacity: 0;
-        transition: opacity 0.5s;
+    .mini_gallery h1{
+        margin: 0;
     }
 
-    .mini_galeria div:hover .tekst{
-        opacity: 1;
-    }
-
-    .mini_galeria div img:hover{
-        filter: brightness(80%);
+    hr{
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        clear: both;
     }
 
 
 /* o nim */
     .about_block{
+        max-width: 1400px;
         margin-left: auto;
         margin-right: auto;
-        max-width: 1200px;
         display: flex;
-        border: 3px solid var(--navbar-background);
-        box-shadow: 4px 4px rgb(241, 239, 239);
+        /* border: 3px solid var(--navbar-background);
+        box-shadow: 4px 4px rgb(241, 239, 239); 
+        background: linear-gradient(to bottom right, #313131, #1821a0); */
+        color: var(--navbar-teks);
         border-radius: 8px;
         align-items: center;
         justify-content: center;
         text-align: left;
-        background: linear-gradient(to bottom right, #313131, #1821a0);
-        color: var(--navbar-tekst);
+    }
+
+    .about_block img,
+    .about_block div{
+        padding: 0 30px;
     }
 
     .about_block img{
@@ -197,8 +216,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 3px solid var(--navbar-background);
-        box-shadow: 4px 4px rgb(245, 243, 243);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
         border-radius: 8px;
     }
 

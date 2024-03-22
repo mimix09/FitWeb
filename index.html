@@ -31,7 +31,7 @@
                 <li><a href="./kontakt.html">Contact</a></li>
             </ul>
 
-            <a href="#" class="action_btn">Get started</a>
+            <a href="./oferty.html" class="action_btn">Get started</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -43,7 +43,7 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#" class="action_btn">Get started</a></li>
+            <li><a href="./oferty.html" class="action_btn">Get started</a></li>
         </div>
     </nav>
 
@@ -75,13 +75,6 @@
                     </div>
                 </div>
                 <div>
-                    <img src="./img/Pills.ico" alt="zdj2">
-                    <div>
-                        <h2>Suplementacja</h2>
-                        <p>Otrzymasz wybrany pod ciebie zestaw suplemnetów takich jak creatyna, białko oraz niezbędne witaminy, dostaniesz również instrukcje kiedy oraz jak często z nich korzystać</p>
-                    </div>
-                </div>
-                <div>
                     <img src="./img/Dumbbell.ico" alt="zdj2">
                     <div>
                         <h2>Wpsólne Treningi</h2>
@@ -92,12 +85,14 @@
         </div>
     </div>
 
-    <div class="about_block">
-        <img src="./img/portret.avif" alt="portret">
-
-        <div>
-            <h1>O mnie</h1>
-            <p>Siema jestem Janek i jestem trenerem personalnym od 5 lat, silownia to moja hobby i pasja. Kocham to robić odkąd skąńczyłem 5 lat jestem w tym dobry i wgl, możesz kupić ten kurs żebym to ja tobie mógł pomóc</p>
+    <div class="tlo">
+        <div class="about_block">
+            <img src="./img/portret.avif" alt="portret">
+    
+            <div>
+                <h1>O mnie</h1>
+                <p>Siema jestem Janek i jestem trenerem personalnym od 5 lat, silownia to moja hobby i pasja. Kocham to robić odkąd skąńczyłem 5 lat jestem w tym dobry i wgl, możesz kupić ten kurs żebym to ja tobie mógł pomóc</p>
+            </div>
         </div>
     </div>
 
@@ -115,32 +110,50 @@
         <a href="#">Zobacz wiecej</a>
     </div>
 
-    <div class="container">
-        <div class="mini_galeria">
-            <div>
-                <img src="./img/dieta.webp" alt="zdj1">
-                <div class="tekst">
-                    <h2>Dieta</h2>
+    <div class="tlo">
+        <div class="other_container">
+            <div class="mini_gallery">
+                <img src="./img/dieta.webp" alt="dieta_zdj">
+
+                <div>
+                    <h1>Dieta</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero voluptatibus nulla provident dolorum aspernatur consequuntur voluptatum sapiente veniam architecto quia laborum voluptates consectetur cum, sunt, maxime alias illo ducimus mollitia.</p>
                 </div>
             </div>
-            <div>
-                <img src="./img/workout2plan.webp" alt="zdj2">
-                <div class="tekst">
-                    <h2>Plan Treningowy</h2>
+
+            <hr>
+
+            <div class="mini_gallery">
+                <div>
+                    <h1>Treningi personalne</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero voluptatibus nulla provident dolorum aspernatur consequuntur voluptatum sapiente veniam architecto quia laborum voluptates consectetur cum, sunt, maxime alias illo ducimus mollitia.</p>
+                </div>
+
+                <img src="./img/personal-traning.webp" alt="dieta_zdj">
+            </div>
+
+            <hr>
+
+            <div class="mini_gallery">
+                <img src="./img/workout2plan.webp" alt="dieta_zdj">
+
+                <div>
+                    <h1>Plan Treningowy</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero voluptatibus nulla provident dolorum aspernatur consequuntur voluptatum sapiente veniam architecto quia laborum voluptates consectetur cum, sunt, maxime alias illo ducimus mollitia.</p>
                 </div>
             </div>
-            <div>
-                <img src="./img/suple.jpg" alt="zdj3">
-                <div class="tekst">
-                    <h2>Suplementacja</h2>
+
+            <hr>
+
+            <div class="mini_gallery">
+                <div>
+                    <h1>Suplementy</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero voluptatibus nulla provident dolorum aspernatur consequuntur voluptatum sapiente veniam architecto quia laborum voluptates consectetur cum, sunt, maxime alias illo ducimus mollitia.</p>
                 </div>
+
+                <img src="./img/suple.jpg" alt="dieta_zdj">
             </div>
-            <div>
-                <img src="./img/personal-traning.webp" alt="zdj14">
-                <div class="tekst">
-                    <h2>Wspólne Treningi</h2>
-                </div>
-            </div>
+
         </div>
     </div>
 
@@ -169,20 +182,7 @@
         </div>
     </div>
 
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn');
-        const toggleBtnIcon = document.querySelector('.toggle_btn i');
-        const dropDownMenu = document.querySelector('.dropdown_menu');
-
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open');
-            const isOpen = dropDownMenu.classList.contains('open');
-
-            toggleBtnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-bars'
-        }
-    </script>
+    <script type="text/javascript" src="./skrypt.js"></script>
 
 </body>
 </html>

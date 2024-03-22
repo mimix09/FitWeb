@@ -87,7 +87,7 @@ nav .naglowek .logo a img {
 }
 
 .action_btn {
-    background-color: var(--navbar-tekst-change);
+    background-color: var(--second-color);
     color: var(--navbar-tekst);
     padding: 0.5rem 1rem;
     border: none;
