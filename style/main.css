@@ -12,180 +12,191 @@
 
 body {
     background-color: var(--main-background);
-    margin: 0;
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: medium;
+    margin: 0 0;
 }
 
 
 /* NAVBAR */
-nav {
-    background-color: var(--navbar-background);
-}
+    nav {
+        background-color: var(--navbar-background);
+    }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-}
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
 
-nav li {
-    list-style: none;
-}
+    nav li {
+        list-style: none;
+    }
 
-nav a {
-    text-decoration: none;
-    color: var(--navbar-tekst);
-    font-size: 1rem;
-}
+    nav a {
+        text-decoration: none;
+        color: var(--navbar-tekst);
+        font-size: 1rem;
+    }
 
-nav a:hover {
-    color: var(--navbar-tekst-change);
-}
+    nav a:hover {
+        color: var(--navbar-tekst-change);
+    }
 
-nav {
-    position: relative;
-    padding: 0 2rem;
-}
+    nav {
+        position: relative;
+        padding: 0 2rem;
+    }
 
-nav .naglowek .logo {
-    width: auto;
-    height: 50%;
-}
+    nav .naglowek .logo {
+        width: auto;
+        height: 50%;
+    }
 
-nav .naglowek .logo a img {
-    width: 100%;
-    height: 100%;
-}
+    nav .naglowek .logo a img {
+        width: 100%;
+        height: 100%;
+    }
 
-.naglowek {
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .naglowek {
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.naglowek .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+    .naglowek .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 
-.naglowek .links {
-    display: flex;
-    gap: 2rem;
-}
+    .naglowek .links {
+        display: flex;
+        gap: 2rem;
+    }
 
-.naglowek .toggle_btn {
-    color: var(--navbar-tekst);
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
+    .naglowek .toggle_btn {
+        color: var(--navbar-tekst);
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
 
-.action_btn {
-    background-color: var(--second-color);
-    color: var(--navbar-tekst);
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
-}
+    .action_btn {
+        background-color: var(--second-color);
+        color: var(--navbar-tekst);
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: scale 0.2 ease;
+    }
 
-.action_btn:hover {
-    scale: 1.05;
-    color: var(--navbar-tekst);
-}
+    .action_btn:hover {
+        scale: 1.05;
+        color: var(--navbar-tekst);
+    }
 
-.action_btn:active {
-    scale: 0.95;
-}
+    .action_btn:active {
+        scale: 0.95;
+    }
 
-/* wysuwane okno */
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 300px;
-    background: rgba(29, 29, 29, 0.5);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 9999;
-}
+    /* wysuwane okno */
+    .dropdown_menu {
+        display: none;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        height: 0;
+        width: 300px;
+        background: rgba(29, 29, 29, 0.5);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 9999;
+    }
 
-.dropdown_menu.open {
-    height: 240px;
-}
+    .dropdown_menu.open {
+        height: 240px;
+    }
 
-.dropdown_menu li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .dropdown_menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.dropdown_menu .action_btn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+    .dropdown_menu .action_btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media(max-width: 1200px){
+        
+    }
+
+    @media(max-width: 992px) {
+
+        .naglowek .links,
+        .naglowek .action_btn {
+            display: none;
+        }
+
+        .naglowek .toggle_btn {
+            display: block;
+        }
+
+        .dropdown_menu {
+            display: block;
+        }
+    }
+
+    @media(max-width: 576px) {
+        .dropdown_menu {
+            left: 2rem;
+            width: unset;
+        }
+    }
 
 /* STOPKA */
     .stopka{
         background-color: var(--navbar-background);
+        height: 120px;
+        padding: 30px;
     }
 
-    .stopka div{
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+    .footer_odnosniki{
+        max-width: 200px;
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .stopka div h2{
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
+    .footer_logo{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
     }
 
-    .stopka div h2 a{
-        text-decoration: none;
-        color: var(--main-background);
+    .footer_logo a img{
+        width: auto;
+        height: 30px;
+        margin: 0 30px;
     }
 
-/* navbar responsywnosc */
-@media(max-width: 992px) {
-
-    .naglowek .links,
-    .naglowek .action_btn {
-        display: none;
+    .footer_logo hr{
+        width: 100%;
     }
-
-    .naglowek .toggle_btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-    }
-}
-
-@media(max-width: 576px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
-}

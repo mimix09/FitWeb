@@ -6,7 +6,7 @@
 }
 
 .block{
-    background-color: var(--main-background);
+    background-color: white;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     border-radius: 10px;
     padding: 40px;
@@ -17,6 +17,10 @@
 
 .block li{
     text-align: left;
+}
+
+.block ul{
+    height: 85px;
 }
 
 .block h1,

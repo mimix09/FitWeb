@@ -17,43 +17,79 @@
     padding: 60px 0;
 }
 
+.second-container{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 1200px;
+}
+
 .tlo{
     background-color: white;
 }
 
-.block_color{
-    width: 100%;
-    height: 650px;
-    background: linear-gradient(to bottom right, var(--navbar-background), var(--second-color));
-    position: relative;
-}
+/* block color */
+    .block_color{
+        width: 100%;
+        height: 650px;
+        background: linear-gradient(to bottom right, var(--navbar-background), var(--second-color));
+        position: relative;
+    }
 
-.block_color img{
-    width: auto;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-    right: 60px;
-}
+    .block_color img{
+        width: auto;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        right: 60px;
+    }
 
-.block_color div{
-    margin: 0;
-    position: absolute;
-    top: 120px;
-    left: 50px;
-}
+    .block_color div{
+        margin: 0;
+        position: absolute;
+        top: 120px;
+        left: 50px;
+    }
 
-.block_color div h1{
-    color: var(--navbar-tekst);
-    font-size: 50px;
-    z-index: 1;
-    margin: 0;
-}
+    .block_color div h1{
+        color: var(--navbar-tekst);
+        font-size: 50px;
+        z-index: 1;
+        margin: 0;
+    }
 
-.block_color div p{
-    color: #e7e7e7;
-    font-size: 35px;
-}
+    .block_color div p{
+        color: #e7e7e7;
+        font-size: 35px;
+    }
+
+    @media(max-width: 1200px){
+        .block_color{
+            max-height: 660px;
+        }
+    }
+
+    @media(max-width: 992px) {
+        .block_color div h1{
+            font-size: 40px;
+        }
+
+        .block_color div p{
+            font-size: 25px;
+        }
+    }
+
+    @media(max-width: 576px) {
+        .block_color div h1{
+            font-size: 35px;
+            width: 20%;
+        }
+
+        .block_color div p{
+            font-size: 20px;
+            width: 80%;
+        }
+    }
 
 /* otrzymasz */
     .otrzymasz{
@@ -92,85 +128,16 @@
         display: block;
     }
 
-
-/* profits */
-    .profits{
-        text-align: center;  
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1200px;
-        padding-top: 5px;
-        margin-top: 40px;
-        padding-bottom: 70px;
-        /* box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 15px;
-        background-color: white; */
+    @media(max-width: 1200px){
+        .otrzymasz div div img{
+            width: 35px;
+        }
     }
 
-    .profits h1{
-        font-size: 50px;
-    }
-
-    .profits .profits_block{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1200px;
-    }
-
-    .profits p{
-        color: var(--second-tekst-color);
-        margin: 20px;
-        font-size: large;
-    }
-
-    .profits a{
-        text-decoration: none;
-        color: var(--navbar-tekst);
-        background-color: var(--navbar-background);
-        padding: 10px;
-        border-radius: 15px;
-        margin-top: 100px;
-    }
-
-
-/* galeria */
-    .mini_gallery{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 20px 0;
-    }
-
-    .mini_gallery div{
-        max-width: 75%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        display: block;
-    }
-
-    .mini_gallery img{
-        width: 700px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .mini_gallery h1{
-        margin: 0;
-    }
-
-    hr{
-        width: 100%;
-        height: 100%;
-        max-width: 1200px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: cover;
-        clear: both;
+    @media(max-width: 992px) {
+        .otrzymasz div{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
 
@@ -208,6 +175,203 @@
 
     .about_block div h1{
         font-size: 50px;
+        margin: 0;
+    }
+
+    @media(max-width: 1200px){
+        .about_block div h1{
+            font-size: 40px;
+        }
+    }
+
+    @media(max-width: 992px) {
+        .about_block div h1{
+            font-size: 35px;
+        }
+
+        .about_block div p{
+            font-size: 17px;
+        }
+
+    }
+
+    @media(max-width: 700px) {
+        .about_block div h1{
+            font-size: 30px;
+        }
+
+        .about_block div p{
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .about_block img{
+            margin: 20px 0;
+        }
+    }
+
+    @media(max-width: 576px) {
+        .about_block{
+            flex-direction: column;
+        }
+
+        .about_block div{
+            max-width: 70%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+
+/* profits */
+    .profits{
+        text-align: center;
+    }
+
+    .profits div{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profits h1{
+        font-size: 40px;
+    }
+
+    .profits div p{
+        color: var(--second-tekst-color);
+        margin: 20px;
+        font-size: large;
+    }
+
+    .profits a{
+        display: block;
+        text-decoration: none;
+        color: var(--navbar-tekst);
+        background-color: var(--navbar-background);
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 40px;
+        width: 130px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media(max-width: 670px) {
+        .profits div{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+
+/* galeria */
+    .mini_gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 0;
+    }
+
+    .mini_gallery div{
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+    }
+
+    .mini_gallery img{
+        width: 700px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .mini_gallery h1{
+        margin: 0;
+    }
+
+    .other_container hr{
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        clear: both;
+    }
+
+    .first_block{
+        display: block;
+    }
+
+    .second_block{
+        display: none;
+    }
+
+    @media(max-width: 1400px){
+        .other_container{
+            max-width: 1200px;
+        }
+    }
+
+    @media(max-width: 1200px){
+        .mini_gallery img{
+            width: 500px;
+            height: 300px;
+        }
+
+        .other_container hr{
+            max-width: 700px;
+        }
+    }
+
+    @media(max-width: 992px) {
+        .mini_gallery img{
+            width: 400px;
+            height: 300px;
+        }
+
+        .other_container hr{
+            width: 400px;
+        }
+    }
+
+    @media(max-width: 830px){
+        .mini_gallery{
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .mini_gallery img{
+            width: 100%;
+        }
+
+        .mini_gallery div{
+            max-width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .first_block{
+            display: none;
+        }
+
+        .second_block{
+            display: block;
+        }
+    }
+
+    @media(max-width: 576px) {
+        .other_container hr{
+            width: 250px;
+        }
+    }   
+    
+    @media(max-width: 420px){
+        .other_container hr{
+            width: 150px;
+        }
     }
 
     
@@ -218,6 +382,7 @@
         justify-content: center;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
         border-radius: 8px;
+        margin-bottom: 80px;
     }
 
     .lokalizacja iframe{
@@ -255,103 +420,62 @@
         border-radius: 15px;
     }
 
+    @media(max-width: 1200px){
+        .lokalizacja div{
+            width: 80%;
+        }
+    }
+
+    @media(max-width: 992px) {
+        .lokalizacja{
+            flex-direction: column;
+        }
+
+        .lokalizacja div div a{
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+
+    @media(max-width: 576px) {
+        .lokalizacja div h1{
+            font-size: 30px;
+        }
+    }
 
 
-
-
+/* ogolne */
 @media(max-width: 1200px){
-    .container{
-        max-width: 900px;
-    }
-
-    .mini_galeria div img{
-        width: 447px;
-        height: 250px;
-    }
-
-
-    .about_block{
+    .container,
+    .other_container,
+    .second-container{
         max-width: 900px;
     }
 }
 
-
 @media(max-width: 992px) {
-    .block_color{
-        position: static;
-    }
-
-
-    .block_color div h1{
-        font-size: 40px;
-    }
-
-    .block_color div p{
-        font-size: 25px;
-    }
-
-
-    .about_block{
-        display: block;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .about_block img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-
-    .about_block div{
-        max-width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .about_block div h1{
-        font-size: 40px;
-    }
-
-    .container{
+    .other_container,
+    .second-container{
         max-width: 700px;
     }
+}
 
-    .mini_galeria{
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 0;
-    }
-
-    .mini_galeria div img{
-        width: 100%;
-        height: 300px;
-        padding-bottom: 10px;
+@media(max-width: 830px){
+    .other_container,
+    .second-container{
+        max-width: 600px;
     }
 }
 
 @media(max-width: 576px) {
-    .block_color div h1{
-        font-size: 30px;
-    }
+        .other_container{
+            max-width: 400px;
+        }
+}
 
-    .block_color div p{
-        font-size: 15px;
-    }
-
-    .profits .profits_block{
-        display: block;
-
-    }
-
-
-    .about_block{
+@media(max-width: 420px){
+    .other_container,
+    .second-container{
         max-width: 300px;
-    }
-
-
-    .otrzymasz{
-        grid-template-columns: repeat(1, 1fr);
     }
 }
