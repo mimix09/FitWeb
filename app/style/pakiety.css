@@ -1,34 +1,34 @@
-.container{
+.container_pakiety {
     max-width: 1200px;
-    margin: 200px auto;
+    margin: 220px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.block{
+
+.block {
     background-color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 40px;
-    margin: 0 30px;
-    width: 200px;
+    margin: 0 50px;
     text-align: center;
 }
 
-.block li{
+.block li {
     text-align: left;
 }
 
-.block ul{
+.block ul {
     height: 85px;
 }
 
 .block h1,
-.block h2{
+.block h2 {
     padding: 3px 0;
 }
 
-.block a{
+.block a {
     background-color: var(--navbar-tekst-change);
     color: var(--navbar-tekst);
     padding: 0.5rem 1rem;
@@ -42,7 +42,7 @@
     text-decoration: none;
 }
 
-.block a:hover{
+.block a:hover {
     scale: 1.05;
     color: var(--navbar-tekst);
 }
