@@ -1,0 +1,99 @@
+/* progress bar */
+.App {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+
+/* bloczki */
+.container_pakiety {
+    max-width: 1200px;
+    margin: 220px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.block {
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4caf50;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 50px;
+    text-align: center;
+}
+
+
+.block li {
+    text-align: left;
+}
+
+.block ul {
+    height: 85px;
+}
+
+.block h1,
+.block h2 {
+    padding: 3px 0;
+}
+
+.block a {
+    background-color: var(--navbar-tekst-change);
+    color: var(--navbar-tekst);
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    text-decoration: none;
+}
+
+.block a:hover {
+    scale: 1.05;
+    color: var(--navbar-tekst);
+}
+
+
+.block .fa-check {
+    color: rgb(255, 0, 0);
+}
+
+.block .bedzie {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+}
+
+.bedzie p {
+    color: rgb(207, 207, 207);
+
+}
+
+@media(max-width: 992px) {
+    .container_pakiety {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 350px;
+    }
+
+    .block {
+        margin: 20px 0;
+    }
+}
