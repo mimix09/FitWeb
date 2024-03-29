@@ -26,6 +26,8 @@ function Contact() {
               <button>Wyślij</button>
             </div>
           </div>
+
+          
           <div className="show">
             <div className="linia"></div>
             <div className="info">

@@ -12,9 +12,9 @@ function Navbar() {
     <nav>
       <div className="naglowek">
         <div className="logo">
-          <a href="./index.html">
+          <Link to="/">
             <img src="./app/assets/logo.png" alt="logo" />
-          </a>
+          </Link>
         </div>
 
         <ul className="links">

@@ -9,6 +9,7 @@ import StronaGlowna from "../app/screens/StronaGlowna";
 import Login from "../app/screens/Login";
 import Contact from "../app/screens/Contact"
 import Pakiety from "../app/screens/Pakiety";
+import Omnie from "../app/screens/Omnie";
 
 import "../app/style/main.css";
 
@@ -18,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Navbar />
       <Routes>
         <Route path="/" element={<StronaGlowna />}></Route>
-        {/* <Route path="/about" element={<StronaGlowna />}></Route> */}
+        <Route path="/about" element={<Omnie />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/kontakt" element={<Contact />}></Route>
         <Route path="/pakiety" element={<Pakiety />}></Route>
