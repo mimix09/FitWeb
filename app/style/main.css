@@ -3,9 +3,13 @@
 
     --second-tekst-color: #383838;
 
-    --navbar-background: #252A2D;
+    --navbar-background: #16191b;
     --navbar-tekst: #EAFFFF;
-    --navbar-tekst-change: orange;
+    --navbar-tekst-change: #ff754c;
+
+    --secondary-bg:rgb(255, 117, 76,0.5);
+
+    --white: #fff;
 
     --second-color: #353797;
 }
@@ -19,45 +23,86 @@ body {
     margin: 0 0;
 }
 
+/* Button */
+.guzik {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+    background-color: var(--navbar-background);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 40px;
+    width: 130px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s all ease-in-out;
+}
+.guzik:hover{
+    transform: scale(1.1);
+}
+/* color */
+.secondary{
+    color:var(--navbar-tekst-change)
+}
+
+/* Logo */
+.logo{
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    margin: 0;
+    text-align: center;
+}
+.logo:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
 
 /* NAVBAR */
 nav {
     background-color: var(--navbar-background);
 }
 
-nav ul {
+nav div ul {
     margin: 0;
     padding: 0;
 }
 
-nav li {
+nav div li {
     list-style: none;
 }
 
-nav a {
+nav div a {
     text-decoration: none;
     color: var(--navbar-tekst);
     font-size: 1rem;
+    transition: 0.18s all ease-in-out;
 }
 
-nav a:hover {
+nav div a:hover, nav a.active {
     color: var(--navbar-tekst-change);
 }
 
 nav {
-    position: relative;
-    padding: 0 2rem;
-}
-
-nav .naglowek .logo {
-    width: auto;
-    height: 50%;
-}
-
-nav .naglowek .logo a img {
+    position: fixed;
+    top:0;
+    overflow: hidden;
+    z-index: 2;
     width: 100%;
-    height: 100%;
+    z-index: 99;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.8px;
 }
+nav div{
+    position: relative;
+    margin: 0 2rem;
+    z-index: 55;
+}
+
 
 .naglowek {
     width: 100%;
@@ -69,10 +114,6 @@ nav .naglowek .logo a img {
     justify-content: space-between;
 }
 
-.naglowek .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
 
 .naglowek .links {
     display: flex;
@@ -111,17 +152,17 @@ nav .naglowek .logo a img {
 /* wysuwane okno */
 .dropdown_menu {
     display: none;
-    position: absolute;
+    position: fixed;
     right: 2rem;
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(29, 29, 29, 0.5);
+    background: rgba(29, 29, 29, 0.7);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 9999;
+    z-index: 99;
 }
 
 .dropdown_menu.open {

@@ -3,72 +3,104 @@
     margin: 0 auto;
 }
 
-
 /* o mnie */
 .aboutmeasd {
-    width: 1600px;
+    width: 100%;
     height: 500px;
     margin: 40px auto;
-    background: linear-gradient(to bottom right, var(--navbar-background), var(--second-color));
-    border-radius: 12px;
+    /* background: linear-gradient(to bottom right, var(--navbar-background), var(--second-color)); */
+    position: relative;
 }
 
 .aboutmeasd div {
     position: absolute;
     top: 180px;
-    left: 250px;
+    left: 100px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fssstar.svg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.aboutmeasd img {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    width: 500px;
 }
 
 .aboutmeasd div h1 {
-    color: var(--navbar-tekst);
+    /* color: var(--navbar-tekst); */
     font-size: 45px;
 }
 
 .aboutmeasd div p {
-    color: white;
+    /* color: white; */
     font-size: 20px;
 }
 
-@media(max-width: 1650px) {
-    .aboutmeasd {
-        max-width: 1200px;
+@media(max-width: 1500px) {
+    .aboutmeasd img {
+        width: 400px;
     }
 }
 
 @media(max-width: 1250px) {
-    .aboutmeasd {
-        max-width: 900px;
+    .aboutmeasd div {
+        top: 150px;
+        left: 30px;
+        max-width: 65%;
+    }
+    .aboutmeasd img {
+        bottom: 60px;
+        right: 10px;
+        width: 350px;
     }
 }
 
 @media(max-width: 992px) {
-    .aboutmeasd {
-        max-width: 600px;
-    }
-
     .aboutmeasd div {
-        max-width: 500px;
+        top: 120px;
+        left: 15px;
+        max-width: 60%;
+    }
+    .aboutmeasd img {
+        bottom: 60px;
+        right: 20px;
+        width: 300px;
     }
 }
 
-@media(max-width: 830px) {
+@media(max-width: 660px) {
     .aboutmeasd {
+        height: 600px;
+    }
+    .aboutmeasd div {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
         max-width: 100%;
-        margin: 0 auto;
-        border-radius: 0;
     }
-
-    .aboutmeasd div {
-        top: 100px;
-        left: 70px;
+    .aboutmeasd img {
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, +50%);
     }
 }
+/* 
 
 @media(max-width: 420px) {
     .aboutmeasd div {
-        left: 20px;
+        top: 180px;
+        left: 100px;
     }
-}
+    .aboutmeasd img {
+        bottom: 50px;
+        right: 250px;
+        width: 300px;
+    }
+} */
 
 /* otrzymasz */
 .otrz {

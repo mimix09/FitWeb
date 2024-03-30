@@ -9,7 +9,7 @@ function Contact() {
           <div className="wysylanie">
             <h1>Napisz</h1>
             <div>
-              <input type="text" placeholder="Imie" />
+              <input type="text" placeholder="Imie i nazwisko" />
               <input type="email" placeholder="Email" />
             </div>
             <div>

@@ -4,12 +4,13 @@ function Omnie(){
     return(
         <div>
             <div className="aboutmeasd">
-                <div>
-                <h1>Jestem Jarek</h1>
+              <div>
+                <h1>Jestem Michael</h1>
                 <p>I jestem trenerem personalnym</p>
                 <p>Dowiedz się jak mogę Tobie pomóc osiągnąć wymarzoną figurę, ciało, itp.</p>
                 <p>ps. zamiast tego tła wstawi się jakieś zdjęcie</p>
                 </div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Ftraining.svg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="svg" />
             </div>
 
       <div className="kontener">
@@ -17,14 +18,14 @@ function Omnie(){
           <h1>Doświadczenie</h1>
           <div>
             <div>
-              <img src="./app/assets/Education.ico" alt="zdj1" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2FEducation-orange.ico?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="zdj1" />
               <div>
                 <h2>Kwalifikacje</h2>
                 <p>Uczęszczałem na Akademię Wychowania Fizycznego. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus vero incidunt obcaecati ipsam totam voluptates nisi harum perspiciatis id atque, deleniti quis quo optio ex corrupti dolores? Tempora, officiis?</p>
               </div>
             </div>
             <div>
-              <img src="./app/assets/Gym.ico" alt="zdj2" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2FGym-orange.ico?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="zdj2" />
               <div>
                 <h2>Doświadczenie</h2>
                 <p>Od ponad 5 lat aktywnie ćwiczę. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus provident qui reiciendis, aspernatur corrupti labore neque aperiam quasi accusamus voluptate nisi atque culpa soluta ut necessitatibus eum earum, laudantium quae?</p>
@@ -36,8 +37,8 @@ function Omnie(){
 
       <div className="zdjecia_onas">
         <div>
-          <img src="./app/assets/personal-traning.webp" alt="z1" />
-          <img src="./app/assets/hantle.jpg" alt="z2" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fpersonal-traning.webp?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="z1" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fhantle.jpg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="z2" />
         </div>
       </div>
 

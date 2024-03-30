@@ -1,50 +1,69 @@
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import "../style/stronaGlowna.css";
 
+
+// Napisałem tą funkcje tylko dlatego że nie chciało mi się pisać "style={{fontWeight:"600"}}" za każdym razem lol
+function Weight({children}){
+  return(
+    <span style={{fontWeight:"600"}}>{children}</span>
+  )
+}
+
 function StronaGlowna() {
+
+  ////// ten kod sprawia, że obrazki się wyświetlają poprawnie, raz obrazek pierwszy, a raz drugi (mobilność), bo ja tam widziałem, że to było wcześniej w css zrobione i ja to skasowałem,
+  //  a potem stwierdziłem że to w sumie było całkiem fajnie zrobione, ale nie wiedziałem jak to naprawić, więc zrobiłem to coś w JS xD
+    const [szmol, setSzmol] = useState(window.innerWidth < 830);
+    useEffect(() => {
+      const handleResize = () => {
+        setIsSmallScreen(window.innerWidth < 830);
+      };
+      window.addEventListener('resize', handleResize);
+      return () => {window.removeEventListener('resize', handleResize);};
+    }, []);
+
+
   return (
     <div>
       <div className="block_color">
-        {/* <img src="./img/guy2.png" alt="zdj1"> */}
+        <img alt="background image"/>
         <div>
-          <h1>Treningi personalne</h1>
-          <p>Idz na siłke byczqu i bądz dojebany</p>
+          <div>
+            <h1>Treningi personalne</h1>
+            <p>"Idź na siłke byczq i bądź dojebany"</p>
+          </div>
         </div>
       </div>
 
       <div className="main_container">
         <div className="otrzymasz">
-          <h1>Co dostaniesz?</h1>
+          <h1>Co ci mogę zaoferować?</h1>
           <div>
             <div>
-              <img src="./app/assets/apple.ico" alt="zdj1" />
+              <img style={{width:"100px"}} src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fapple.ico?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="zdj1" />
               <div>
                 <h2>Diete</h2>
                 <p>
-                  Dostaniesz spersonalizowaną deite która pomorze tobie
-                  zrzycic/przybrać wage
+                  Otrzymasz spersonalizowaną dietę, która pomoże Ci zrzucić/przybrać wagę.
                 </p>
               </div>
             </div>
             <div>
-              <img src="./app/assets/Dumbbell.ico" alt="zdj2" />
+              <img style={{width:"100px"}} src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2FDumbbell.ico?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="zdj2" />
               <div>
                 <h2>Plan Treningowy</h2>
                 <p>
-                  Dostaniesz plan treningowy który będzie spersonalizowaną
-                  specjalnie pod twoją budowę ciała, diete oraz efekty jakie
-                  bedziesz chciał uzyskać
+                  Otrzymasz plan treningowy, który będzie spersonalizowany specjalnie pod Twoją budowę ciała, dietę oraz efekty, jakie chcesz uzyskać
                 </p>
               </div>
             </div>
             <div>
-              <img src="./app/assets/Deadlift.ico" alt="zdj2" />
+              <img style={{width:"100px"}} src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2FDeadlift.ico?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="zdj2" />
               <div>
-                <h2>Wpsólne Treningi</h2>
+                <h2>Wspólne Treningi</h2>
                 <p>
-                  Będziesz miał szanse ćwiczyc pod okiem doświadczonego trenera
-                  personalnego który zaprezentuje tobie prawidłowe techniki
-                  wykonywania ćwiczeń
+                  Będziesz miał szansę ćwiczyć pod okiem doświadczonego trenera personalnego, który pokaże Ci prawidłowe techniki wykonywania ćwiczeń
                 </p>
               </div>
             </div>
@@ -54,130 +73,73 @@ function StronaGlowna() {
 
       <div className="tlo">
         <div className="about_block">
-          <img src="./app/assets/portret.avif" alt="portret" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fmichael.png?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559" alt="portret" loading="lazy"/>
           <div>
             <h1>O mnie</h1>
             <p>
-              Siema jestem Janek i jestem trenerem personalnym od 5 lat,
-              silownia to moja hobby i pasja. Kocham to robić odkąd skąńczyłem 5
-              lat jestem w tym dobry i wgl, możesz kupić ten kurs żebym to ja
-              tobie mógł pomóc
-            </p>
+            Jestem trenerem personalnym z Krakowa, mam 5-letnie doświadczenie w pomaganiu ponad 50 osobom osiągnąć cele fitnessowe. Moje podejście to motywacja i spersonalizowane wsparcie. Dołącz do mojego zespołu, razem osiągniemy Twoje cele i cieszmy się drogą do lepszej wersji siebie!            </p>
+            <Link to="/kontakt" className="guzik">Czytaj dalej</Link>
           </div>
         </div>
       </div>
       <div className="main_container">
         <div className="profits">
-          <h1>Profity</h1>
+          <h1><span className="secondary">Korzyści</span> trenowania ze mną</h1>
           <div>
             <p>
-              <strong>Pierwszy</strong> profit jest taki że zyskaz duzo z tego
-              wszystkiego i wgl to się mega oplaca wiec warto to kupic byczq,
-              pisze radnomowy teskt bo nie mam pojecia co pisac :|
+              <strong>Spersonalizowane podejście</strong><br/> Dzięki mojej indywidualnej uwadze i doświadczeniu, dostosowuję treningi do Twoich unikalnych celów, umiejętności i potrzeb, zapewniając efektywność i bezpieczeństwo podczas każdej sesji.
             </p>
             <p>
-              <strong>Drugi</strong> profit jest taki że zyskaz duzo z tego
-              wszystkiego i wgl to się mega oplaca wiec warto to kupic byczq,
-              pisze radnomowy teskt bo nie mam pojecia co pisac :|
+              <strong>Motywacja i wsparcie</strong><br/> Jako trener personalny nie tylko dostarczam Ci planów treningowych, ale również jestem Twoim motywatorem i wsparciem przez całą drogę. Pomagam Ci pokonywać przeszkody, utrzymywać wysoki poziom motywacji i kierować Cię w kierunku sukcesu.
             </p>
             <p>
-              <strong>Trzeci</strong> profit jest taki że zyskaz duzo z tego
-              wszystkiego i wgl to się mega oplaca wiec warto to kupic byczq,
-              pisze radnomowy teskt bo nie mam pojecia co pisac :|
+              <strong>Zróżnicowane i efektywne treningi</strong><br/> Moja wiedza i kreatywność pozwalają mi stworzyć różnorodne i interesujące treningi, które nie tylko przynoszą rezultaty, ale również sprawiają, że trening staje się przyjemnością. Dzięki temu unikamy rutyny i stale motywujemy się do dalszego rozwoju.
             </p>
           </div>
-          <Link to="/kontakt">Zobacz więcej</Link>
+          <Link to="/kontakt" className="guzik">Napisz do mnie!</Link>
         </div>
       </div>
 
       <div className="tlo">
         <div className="other_container">
+          <h1 style={{textAlign:"center", margin:"20px 0 70px 0"}}>Moje usługi: Co oferuje?</h1>
           <div className="mini_gallery">
-            <img src="./app/assets/dieta.webp" alt="dieta_zdj" />
+            <img style={{backgroundImage:`url("https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fdiet.jpg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559")`}} loading="lazy"/>
             <div>
               <h1>Dieta</h1>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
-                voluptatibus nulla provident dolorum aspernatur consequuntur
-                voluptatum sapiente veniam architecto quia laborum voluptates
-                consectetur cum, sunt, maxime alias illo ducimus mollitia.
+                Dostarczam spersonalizowane plany żywieniowe, dopasowane do Twoich celów i preferencji. Chcę, abyś otrzymał wszystkie <Weight>niezbędne składniki</Weight> odżywcze, które pomogą Ci w treningach i osiągnięciu Twoich celów
               </p>
             </div>
           </div>
-          <hr />
-          <div className="first_block">
-            <div className="mini_gallery">
-              <div>
-                <h1>Treningi personalne</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Libero voluptatibus nulla provident dolorum aspernatur
-                  consequuntur voluptatum sapiente veniam architecto quia
-                  laborum voluptates consectetur cum, sunt, maxime alias illo
-                  ducimus mollitia.
-                </p>
-              </div>
-              <img src="./app/assets/personal-traning.webp" alt="dieta_zdj" />
-            </div>
-          </div>
-          <div className="second_block">
-            <div className="mini_gallery">
-              <img src="./app/assets/personal-traning.webp" alt="dieta_zdj" />
-              <div>
-                <h1>Treningi personalne</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Libero voluptatibus nulla provident dolorum aspernatur
-                  consequuntur voluptatum sapiente veniam architecto quia
-                  laborum voluptates consectetur cum, sunt, maxime alias illo
-                  ducimus mollitia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <hr />
           <div className="mini_gallery">
-            <img src="./app/assets/workout2plan.webp" alt="dieta_zdj" />
+            {szmol ? <img style={{backgroundImage:`url("https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fpersonal_trainer.jpg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559")`}} loading="lazy"/> : <></>}
+            <div>
+              <h1>Treningi personalne</h1>
+              <p>
+                Mam dla Ciebie indywidualne sesje treningowe, które dostosuję do <Weight>Twoich celów i umiejętności</Weight>. Podczas każdej sesji będziesz miał pełne wsparcie i motywację, aby osiągnąć najlepsze wyniki
+              </p>
+            </div>
+            {szmol ? <></> : <img style={{backgroundImage:`url("https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fpersonal_trainer.jpg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559")`}} loading="lazy"/>}
+          </div>
+          <div className="mini_gallery">
+            <img style={{backgroundImage:`url("https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fplan1.2.jpg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559")`}} loading="lazy"/>
             <div>
               <h1>Plan Treningowy</h1>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
-                voluptatibus nulla provident dolorum aspernatur consequuntur
-                voluptatum sapiente veniam architecto quia laborum voluptates
-                consectetur cum, sunt, maxime alias illo ducimus mollitia.
+                Przygotuję dla Ciebie spersonalizowany plan treningowy, który będzie obejmował <Weight>różnorodne formy treningu</Weight>, dostosowane do Twojego harmonogramu i poziomu zaawansowania. Razem skupimy się na kompleksowym rozwoju i osiągnięciu Twoich celów
               </p>
             </div>
           </div>
-          <hr />
-          <div className="first_block">
-            <div className="mini_gallery">
-              <div>
-                <h1>Suplementy</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Libero voluptatibus nulla provident dolorum aspernatur
-                  consequuntur voluptatum sapiente veniam architecto quia
-                  laborum voluptates consectetur cum, sunt, maxime alias illo
-                  ducimus mollitia.
-                </p>
-              </div>
-              <img src="./app/assets/suple.jpg" alt="dieta_zdj" />
+          <div className="mini_gallery">
+            {szmol ? <img style={{backgroundImage:`url("https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fsuplement.jpg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559")`}} loading="lazy"/> : <></>}
+            <div>
+              <h1>Suplementy</h1>
+              <p>
+                Doradzę Ci w kwestii suplementacji, dostosowując ją do Twoich potrzeb i celów. Razem dobierzemy <Weight>odpowiednie produkty</Weight>, które wesprą Twoje treningi, regenerację i ogólną kondycję
+              </p>
             </div>
-          </div>
-          <div className="second_block">
-            <div className="mini_gallery">
-              <img src="./app/assets/suple.jpg" alt="dieta_zdj" />
-              <div>
-                <h1>Suplementy</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Libero voluptatibus nulla provident dolorum aspernatur
-                  consequuntur voluptatum sapiente veniam architecto quia
-                  laborum voluptates consectetur cum, sunt, maxime alias illo
-                  ducimus mollitia.
-                </p>
-              </div>
-            </div>
+            {szmol ? <></>: <img style={{backgroundImage:`url("https://firebasestorage.googleapis.com/v0/b/kopcza.appspot.com/o/assets%2Fsuplement.jpg?alt=media&token=bdadca22-40db-4a4c-b9c6-164ae1eb5559")`}} loading="lazy"/>}
           </div>
         </div>
       </div>
@@ -196,12 +158,10 @@ function StronaGlowna() {
           <div>
             <h1>Gdzie można mnie znaleść</h1>
             <p>
-              Personalnie jestem dostępny na terenie Krakowa, jesli chciałbym
-              się z mną skontakować lub masz jakieś pytania co do treningu to
-              skontaktyj się z mną
+              Mieszkam w <strong className="secondary">Krakowie</strong> i prowadzę treningi na miejscu, ale również pomagam osobom spoza Krakowa w tworzeniu planów treningowych oraz diet
             </p>
-            <div className="guzik">
-              <Link to="/kontakt">kontakt</Link>
+            <div className="guzik" style={{maxWidth:"150px"}}>
+              <Link to="/kontakt" style={{margin:"0"}}>Napisz do mnie!</Link>
             </div>
           </div>
         </div>

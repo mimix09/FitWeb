@@ -4,14 +4,14 @@ function Footer() {
   return (
     <div className="stopka">
       <div className="footer_odnosniki">
-        <Link to="/"><p>FaceBook</p></Link>
-        <Link to="/"><p>Instagram</p></Link>
-        <Link to="/"><p>Twitter</p></Link>
+        <Link to="/" style={{textDecoration:"none"}}><p>Facebook</p></Link>
+        <Link to="/" style={{textDecoration:"none"}}><p>Instagram</p></Link>
+        <Link to="/" style={{textDecoration:"none"}}><p>Twitter</p></Link>
       </div>
 
       <div className="footer_logo">
         <hr />
-        <Link to="/"><img src="./app/assets/logo.png" alt="logo" /></Link>
+        <h1 className="logo" style={{minWidth:"200px"}}>Michał Kopcza</h1>
         <hr />
       </div>
     </div>
